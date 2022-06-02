@@ -1,5 +1,3 @@
-$(document).ready((function () { $(window).scroll((function () { $(this).scrollTop() > 1 ? ($(".navbar").removeClass("bg-transparent"), $(".navbar").addClass("bg-primary")) : 0 == $(this).scrollTop() && ($(".navbar").removeClass("bg-primary"), $(".navbar").addClass("bg-transparent")) })), $("#header-button").click((function () { $(this).toggleClass("hamburger-open"), $(".menu").toggle().toggleClass("menu-active") })) }));
-
 $(document).ready(function () {
     console.log("document ready");
 

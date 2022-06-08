@@ -202,7 +202,7 @@ header {
 .info-banner {
     position: relative;
     height: 100%;
-    padding: 5em 3em 0;
+    padding: 5.5em 3em 0;
 }
 
 .sections-info-banner {
@@ -293,7 +293,7 @@ header {
     background-position: center;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .difumination::before, .difumination::after {
@@ -418,18 +418,19 @@ header {
     padding: 1rem;
     width: 100%;
     text-align: center;
+    border-radius: 0.6rem;
     color: whitesmoke;
     background-color: whitesmoke;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
     z-index: 1;
 
 }
-
+/* 
 @media (min-width: 600px) {
     .card {
         height: 350px;
     }
-}
+} */
 
 .card:before {
     content: "";
@@ -442,6 +443,9 @@ header {
     background-position: 0 0;
     transition: transform calc(var(--d) * 1.5) var(--e);
     pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .card:after {
@@ -459,19 +463,23 @@ header {
 }
 
 .card:nth-child(1):before {
-    background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    background-image: url('https://i.imgur.com/YfV2nG4.png');
+    opacity: 0.8;
 }
 
 .card:nth-child(2):before {
-    background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    background-image: url('https://i.imgur.com/cW3FdPl.png');
+    opacity: 0.8;
 }
 
 .card:nth-child(3):before {
-    background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    background-image: url('https://i.imgur.com/Oz5oQkH.png');
+    opacity: 0.8;
 }
 
 .card:nth-child(4):before {
-    background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    background-image: url('assets/img/illustration.svg');
+    opacity: 0.8;
 }
 
 .content {
@@ -493,6 +501,8 @@ header {
     font-size: 1.3rem;
     font-weight: bold;
     line-height: 1.2;
+    color: var(--txt);
+
 }
 
 .copy {
@@ -511,8 +521,14 @@ header {
     letter-spacing: 0.025rem;
     text-transform: uppercase;
     color: white;
-    background-color: black;
+    border-radius: 0.4rem;
+    background-color: var(--Principal);
     border: none;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
 }
 
 .btn:hover {

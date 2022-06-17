@@ -27,6 +27,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     min-height: 150vh;
+    width: 100%;
     background-color: var(--white);
     place-items: center;
 }
@@ -216,6 +217,7 @@ header {
 .sections-info-banner {
     position: relative;
     height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
@@ -347,7 +349,7 @@ header {
     height: 34em;
     scroll-snap-align: start;
     flex-shrink: 0;
-    padding: 5.5em 0em 0;
+    padding: 5.5em 0 0;
     background-color: inherit;
     justify-content: center;
     align-items: center;
@@ -379,7 +381,7 @@ header {
     display: flex;
     top: 95%;
     justify-content: center;
-    z-index: 20;
+    z-index: 2;
 }
 
 .manual-btn {
@@ -475,7 +477,8 @@ header {
 }
 
 #slide-5 {
-    background-image: url('https://i.imgur.com/UXlzfsW.jpg');
+    /* background-image: url('https://i.imgur.com/UXlzfsW.jpg'); */
+    background-image: url('https://aulasvirtuales.uniajc.edu.co/pluginfile.php/1/theme_moove/sliderimage1/1655400705/Profe%20enchufado%20M-03%20%281%29.svg');
 }
 
 
@@ -665,7 +668,7 @@ header {
 }
 
 .info-section {
-    height: 90vh;
+    min-height: 90vh;
     padding-top: 2.5em;
     background-color: var(--white);
     background-image: var(--bg-image);
@@ -943,6 +946,152 @@ header {
         -o-transform: rotate(360deg);
         transform: rotate(360deg);
     }
+}
+
+@media (max-width: 1300px) {
+    .figure {
+        display: none;
+    }
+
+    .section-content {
+        border: 0;
+        border-right: 1px solid var(--orange);
+    }
+
+    .container-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .info-section {
+        min-height: 70vh;
+        padding: 3.5rem 0 2rem 1rem;
+    }
+
+    .pre-info-foot {
+        font-weight: 200;
+        font-size: 14px;
+    }
+
+    .number {
+        display: none;
+    }
+
+    .container-sect {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        height: 300px;
+        /* display: none; */
+    }
+
+    .title p {
+        font-size: 300%;
+    }
+
+    .slides>.slide {
+        position: relative;
+        width: 100%;
+        height: 90%;
+    }
+
+}
+
+@media (max-width: 900px) {
+    /* Hamburger navbar */
+    .three{
+        display: none;
+    }
+    .two{
+        display: none;
+    }
+
+    .navbar-top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .section-content {
+        border: 0;
+    }
+
+    .container-info {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-info article {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .soport .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .soport {
+        display: grid;
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .soport .content {
+        position: relative;
+        transform: translateX(calc(100% - 9rem));
+        background-color: red;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card {
+        height: 300px;
+        width: 100%;
+        display: none;
+    }
+
+    .info-section {
+        font-size: 10%;
+    }
+
+    .floating-text h2 {
+        font-size: 3rem;
+    }
+
+    .plataforms-icon {
+        height: 5rem;
+    }
+}
+
+@media (max-width: 930px) {
+    .card {
+        height: 290px;
+    }
+
+    /* .menu-li{
+        display: none;
+    } */
 }
 
 

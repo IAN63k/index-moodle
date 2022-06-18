@@ -26,6 +26,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    font-display: fallback;
     min-height: 150vh;
     width: 100%;
     background-color: var(--white);

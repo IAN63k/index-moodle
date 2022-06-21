@@ -113,9 +113,10 @@ header {
     float: left;
 }
 
-.menu-top li span, .menu li span:hover {
+.menu-top li span, .menu li span {
     display: block;
     color: var(--txt);
+    text-transform: uppercase;
     text-align: center;
     padding: 12px 16px;
     text-decoration: none;
@@ -222,19 +223,24 @@ header {
 .menu {
     position: fixed;
     top: 5em;
-    width: 100%;
-    left: 0;
-    min-height: 40vh;
+    width: 50%;
+    right: 0;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     text-align: center;
     z-index: 10;
-    background-color: var(--white);
+    padding: 60px 20px 60px 0;
+    background: rgba(255, 255, 255, 0.48);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     transition: 0.2s ease-in;
     transition-delay: 0.2s;
     display: none;
+    animation: MenuMobile_entry .5s ease;
 }
+
 
 .menu li {
     padding: 0.5em;
@@ -267,9 +273,11 @@ header {
 }
 
 .pre-info, .illustration {
-    display: grid;
-    align-items: center;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
     justify-content: center;
+    gap: 5px;
     text-align: center;
 }
 
@@ -302,10 +310,6 @@ header {
     color: var(--Principal);
 }
 
-.btn-info {
-    margin-top: 20px;
-}
-
 .btn-info button:hover {
     background-color: var(--orange);
 }
@@ -334,7 +338,7 @@ header {
 .decoration {
     position: relative;
     height: 100%;
-    width: 30em;
+    /* width: 30em; */
     display: flex;
 }
 
@@ -511,12 +515,16 @@ header {
     background-position: center;
 }
 
+#slide-2 {
+    background-image: url('https://i.imgur.com/2KmZE13.jpg');
+}
+
 #slide-3 {
     background-image: url('https://i.imgur.com/Vl3POmJ.jpg');
 }
 
-#slide-2 {
-    background-image: url('https://i.imgur.com/2KmZE13.jpg');
+#slide-4 {
+    background-image: url('https://i.imgur.com/jX85RaA.gif');
 }
 
 #slide-5 {
@@ -1157,6 +1165,16 @@ header {
  -- Animaciones  --
 -------------------------------- */
 
+@keyframes MenuMobile_entry {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @keyframes animate {
 
     0%,
@@ -1325,7 +1343,11 @@ header {
 /** --------------------------------
  -- Media querys (Estilos para movíl)  --
 -------------------------------- */
-@media (max-width: 900px) {
+@media (max-width: 930px) {
+
+    header {
+        height: 28em;
+    }
 
     .info-section {
         padding-bottom: 0;
@@ -1353,8 +1375,6 @@ header {
         padding: 24px 10px;
         position: relative;
         user-select: none;
-        border: 1.5px solid var(--orange);
-        border-radius: 0.2rem;
         margin-right: 1.2rem;
     }
 
@@ -1413,18 +1433,57 @@ header {
         top: 0;
     }
 
-
     .menu-toggle .menu {
         clear: both;
         max-height: 0;
         transition: max-height .2s ease-out;
     }
 
-
     .navbar-top {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(1, 1fr);
+    }
+
+    #slide-1, #slide-2, #slide-3, #slide-4, #slide-5 {
+        background-size: contain;
+    }
+
+    .sections-info-banner {
+        /* ajustar el texto */
+        /* font-size: 0.8rem; */
+        font-size: calc(12px - 10%);
+    }
+
+    .btn-info button {
+        font-size: 0.8rem;
+        height: 3em;
+    }
+
+    .slides>.slide {
+        padding: 0;
+    }
+
+    .pre-info {
+        padding-left: 3em;
+    }
+
+    .pre-info-foot {
+        font-size: calc(12px - 10%);
+    }
+
+    .difumination::before, .difumination::after {
+        content: "";
+        width: 150px;
+        height: 150px;
+    }
+
+    .difumination::before {
+        bottom: 50%;
+    }
+
+    .difumination::after {
+        bottom: 30%;
     }
 
     .section-content {
@@ -1498,6 +1557,45 @@ header {
         display: none;
     }
 
+}
+
+
+@media (max-width: 530px) {
+
+    .sections-info-banner {
+        font-size: 50%;
+    }
+
+    .illustration-figure {
+        width: 80%;
+    }
+
+    .pre-info-foot {
+        font-size: 8px;
+    }
+
+    .difumination::before, .difumination::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+    }
+
+    .difumination::before {
+        bottom: 50%;
+    }
+
+    .difumination::after {
+        bottom: 35%;
+        left: 10%;
+    }
+
+    .title-cntr {
+        height: 12em;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
 }
 
 /** --------------------------------

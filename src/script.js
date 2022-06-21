@@ -22,6 +22,7 @@ window.addEventListener('scroll', (event) => {
 
 toggleMenu = () => {
     menu.classList.toggle('show-menu');
+    navbar.classList.add('bg-transparent');
 }
 
 
@@ -59,7 +60,7 @@ for (let i = 0; i < item.length; i++) {
         }
         if (item[i].innerHTML == 'Contacto') {
             // scroll the window to down
-            window.scrollTo(0, 1300);
+            window.scrollTo(0, 2500);
         }
     });
 }

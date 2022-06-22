@@ -1,9 +1,10 @@
 
-const navbar    = document.querySelector('.navbar');
-const helps     = document.getElementById('menu-li');
-const item      = [...document.querySelectorAll('.item')];
+const navbar = document.querySelector('.navbar');
+const helps = document.getElementById('menu-li');
+const item = [...document.querySelectorAll('.item')];
 const hamburger = document.querySelector('#menu-btn');
-const menu      = document.querySelector('.menu');
+const menu = document.querySelector('.menu');
+const logo = document.querySelector('.uniajc-logo');
 
 let counter = 2;
 
@@ -13,8 +14,13 @@ let counter = 2;
 window.addEventListener('scroll', (event) => {
     if (window.scrollY < 20) {
         navbar.classList.remove('bg-transparent');
+        item.forEach(i => { i.classList.add('cl-item') })
+        logo.src = 'https://i.imgur.com/HoNwVDh.png';
     } else {
         navbar.classList.add('bg-transparent');
+        item.forEach(i => { i.classList.remove('cl-item') });
+        logo.src = 'https://i.imgur.com/LnGfALA.png';
+        menu.classList.add('bg-menu');
     }
 });
 
@@ -22,6 +28,7 @@ window.addEventListener('scroll', (event) => {
 
 toggleMenu = () => {
     menu.classList.toggle('show-menu');
+    logo.src = 'https://i.imgur.com/LnGfALA.png';
     navbar.classList.add('bg-transparent');
 }
 

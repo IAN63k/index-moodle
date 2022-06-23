@@ -136,7 +136,7 @@ header {
     transform: translateY(-8px);
 }
 
-.cl-item{
+.cl-item {
     color: var(--txt);
 }
 
@@ -182,7 +182,7 @@ header {
 }
 
 .psuedo-text {
-    color: var(--Principal);
+    color: var(--white);
     position: relative;
     transition: 0.2s ease-in;
     transition-delay: 0.2s;
@@ -199,7 +199,7 @@ header {
 .button-mat:before {
     content: "";
     display: block;
-    background: var(--Principal);
+    background: var(--white);
     position: absolute;
     top: 2em;
     width: 260%;
@@ -213,7 +213,7 @@ header {
 }
 
 .button-mat:hover .psuedo-text {
-    color: var(--white);
+    color: var(--yellow);
 }
 
 .button-mat:hover {
@@ -252,7 +252,7 @@ header {
     animation: MenuMobile_entry .5s ease;
 }
 
-.bg-menu{
+.bg-menu {
     background: rgba(28, 28, 63, 0.48);
 }
 
@@ -1167,6 +1167,65 @@ header {
     height: 150px;
     animation-delay: 20s;
     animation-duration: 21s;
+}
+
+.copy-button:before {
+    content: "";
+    display: none;
+    position: absolute;
+    z-index: 9998;
+    top: 55px;
+    left: 18px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.72);
+}
+
+.copy-button:after {
+    content: "¿Copiar?";
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 60px;
+    left: -36px;
+    width: 114px;
+    height: 36px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 36px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.72);
+    border-radius: 3px;
+}
+
+.copy-button:hover {
+    background-color: #eee;
+}
+
+.copy-button:hover:before, .copy-button:hover:after {
+    display: block;
+}
+
+.copy-button:active, .copy-button:focus {
+    outline: none;
+}
+
+.copy-button:active:after, .copy-button:focus:after {
+    content: "Copiado!";
+}
+
+.signature {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    color: rgba(0, 0, 0, 0.07);
+    font-size: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /** --------------------------------

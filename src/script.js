@@ -5,6 +5,8 @@ const item = [...document.querySelectorAll('.item')];
 const hamburger = document.querySelector('#menu-btn');
 const menu = document.querySelector('.menu');
 const logo = document.querySelector('.uniajc-logo');
+const email = document.querySelector('.email');
+const copyText = document.querySelector('#copy-text');
 
 let counter = 2;
 
@@ -72,4 +74,15 @@ for (let i = 0; i < item.length; i++) {
     });
 }
 
+
+// Copiar al portapapeles el correo.
+
+const copy = (text) => {
+    var textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+}
 

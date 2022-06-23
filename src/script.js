@@ -7,6 +7,8 @@ const menu = document.querySelector('.menu');
 const logo = document.querySelector('.uniajc-logo');
 const email = document.querySelector('.email');
 const copyText = document.querySelector('#copy-text');
+const modal = document.querySelector('.modal-window');
+const reveals = document.querySelectorAll('.reveal');
 
 let counter = 2;
 
@@ -86,3 +88,25 @@ const copy = (text) => {
     document.body.removeChild(textarea);
 }
 
+
+// Cierre del modal
+
+modal.addEventListener("click", (e) => {
+    console.log(e.target);
+});
+
+// Animacion de scroll en elementos
+
+const reveal = () => {
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let revealTop = reveals[i].getBoundingClientRect().top;
+        let revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add('show-element');
+        }
+    }
+}
+
+window.addEventListener('scroll', reveal);

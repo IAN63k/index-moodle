@@ -155,7 +155,7 @@
             </div>
         </section>
         <!-- Sección de preguntas frecuentes en cards -->
-        <section class="carousel">
+        <section class="carousel reveal">
             <ul class="circles">
                 <li></li>
                 <li></li>
@@ -174,7 +174,7 @@
                     <div class="content">
                         <h2 class="title-s">¿Cual es mi usuario?</h2>
                         <p class="copy">Si aún no cuentas con un usuario o no lo recuerdas, sigue estos pasos👇</p>
-                        <button class="btn">Ver pasos</button>
+                        <a href="#open-modal-user"><button class="btn">Ver pasos</button></a>
                     </div>
                 </div>
                 <div class="card">
@@ -203,8 +203,16 @@
                 </div>
             </div>
         </section>
+        <!-- modal-add-teacher -->
+        <div id="open-modal-user" class="modal-window">
+            <div>
+                <a href="" title="Close" class="modal-close">X</a>
+                <div class="item-modal">
+                </div>
+            </div>
+        </div>
         <!-- Sección de información -->
-        <section class="info-section">
+        <section class="info-section reveal">
             <div class="container-info">
                 <div class="figure">
                     <div class="figure-right"></div>
@@ -245,7 +253,7 @@
             </div>
         </section>
         <!-- Sección de información adicional -->
-        <section class="info-section">
+        <section class="info-section reveal">
             <div class="container-sect">
                 <div class="text">
                     <h2>Moodle</h2>

@@ -59,7 +59,7 @@
             </div>
         </nav>
         <!-- Banner -->
-        <section class="info-banner">
+        <section class="info-banner reveal">
             <div class="slider">
                 <div class="slides">
                     <!--radio buttons start-->
@@ -203,11 +203,16 @@
                 </div>
             </div>
         </section>
-        <!-- modal-add-teacher -->
+        <!-- MODAL -->
         <div id="open-modal-user" class="modal-window">
             <div>
                 <a href="" title="Close" class="modal-close">X</a>
                 <div class="item-modal">
+                    <h2>Ten encuenta lo siguiente...</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, et quidem! Ipsa sit ullam suscipit debitis assumenda deleniti? Eum corporis harum, ipsam officia quidem similique. Necessitatibus architecto tempore eligendi placeat exercitationem, atque maxime nemo distinctio autem, cupiditate voluptatum unde delectus ex fuga laudantium culpa.
+                    </p>
+                    <h3>¿No puedes ingresar con tu usuario?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia unde aliquid corporis provident, ipsa est repudiandae? Iste vitae eos voluptates?</p>
                 </div>
             </div>
         </div>
@@ -257,8 +262,7 @@
             <div class="container-sect">
                 <div class="text">
                     <h2>Moodle</h2>
-                    <h3>En</h3>
-                    <h2>Cifras</h2>
+                    <h3>Cifras</h3>
                 </div>
                 <div class="number users">
                     <img src="https://i.imgur.com/Vq1SNPZ.gif" alt="Usuarios">
@@ -285,7 +289,7 @@
         </section>
     </main>
     <footer>
-        <div class="footer">
+        <div class="footer reveal">
             <div class="col">
                 <figure>
                     <a href="https://www.uniajc.edu.co/">
@@ -387,5 +391,36 @@
 <!-- patrial -->
 <!-- <script src="assets/js/script-minifi.js"></script> -->
 <script src="script.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+<!-- Animacion de scroll en elementos -->
+
+<script>
+    const divs = gsap.utils.toArray('.reveal');
+
+    divs.forEach(div => {
+        const anim = gsap.fromTo(
+            div,
+            {
+                autoAlpha: 0,
+                y: 100,
+                x: -100,
+                rotate: -10
+            },
+            {
+                duration: 0.6,
+                autoAlpha: 1,
+                y: 0,
+                x: 0,
+                rotate: 0
+            }
+        );
+        ScrollTrigger.create({
+            trigger: div,
+            animation: anim,
+        });
+    });
+</script>
 
 </html>

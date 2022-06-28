@@ -80,7 +80,7 @@ for (let i = 0; i < item.length; i++) {
 // Copiar al portapapeles el correo.
 
 const copy = (text) => {
-    var textarea = document.createElement("textarea");
+    const textarea = document.createElement("textarea");
     textarea.value = text;
     document.body.appendChild(textarea);
     textarea.select();
@@ -88,25 +88,3 @@ const copy = (text) => {
     document.body.removeChild(textarea);
 }
 
-
-// Cierre del modal
-
-modal.addEventListener("click", (e) => {
-    console.log(e.target);
-});
-
-// Animacion de scroll en elementos
-
-const reveal = () => {
-    for (let i = 0; i < reveals.length; i++) {
-        let windowHeight = window.innerHeight;
-        let revealTop = reveals[i].getBoundingClientRect().top;
-        let revealPoint = 150;
-
-        if (revealTop < windowHeight - revealPoint) {
-            reveals[i].classList.add('show-element');
-        }
-    }
-}
-
-window.addEventListener('scroll', reveal);

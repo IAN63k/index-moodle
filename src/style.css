@@ -35,6 +35,7 @@ body {
 :is(body, .modal-window>div)::-webkit-scrollbar {
     -webkit-appearance: none;
 }
+
 :is(body, .modal-window>div)::-webkit-scrollbar:vertical {
     width: 5px;
 }
@@ -358,8 +359,7 @@ header {
 
 .illustration-figure {
     width: 100%;
-    /* background-image: url('./assets/img/illustration.svg'); */
-    background-image: url('https://i.imgur.com/JLbgEDg.png');
+    background-image: url('assets/img/img-banner-1.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -848,11 +848,12 @@ header {
 }
 
 .moodle {
-    background-image: url('https://i.imgur.com/ugIWiTf.png');
+    background-image: url('assets/img/img-moodle.webp');
 }
 
 .dprto {
-    background-image: url('https://i.imgur.com/E3WuhRF.png');
+    background-image: url('assets/img/logo-uniajc-virtual.webp');
+
 }
 
 .soport {
@@ -871,12 +872,15 @@ header {
 
 
 .soport .card:nth-child(1):before {
-    background-image: url('https://i.imgur.com/zrUjxZB.png');
+    background-image: url('assets/img/soport-pro.webp');
     background-size: contain;
+    background-position: center;
 }
 
 .soport .card:nth-child(2):before {
-    background-image: url('https://i.imgur.com/3MjWkZY.png');
+    background-image: url('assets/img/soport-est.webp');
+    background-size: cover;
+    background-position: left;
 }
 
 .text {
@@ -1295,7 +1299,7 @@ a:hover {
     text-align: left;
 }
 
-.item-modal p{
+.item-modal p {
     padding: 15px 0;
     font-weight: 300;
 }
@@ -1370,6 +1374,11 @@ a:hover {
     opacity: 1;
 } */
 
+/* referencia de ilustraciones */
+
+.referencs {
+    background-color: #2f7daa;
+}
 
 /** --------------------------------
  -- Animaciones  --

@@ -1,14 +1,14 @@
 
-const navbar = document.querySelector('.navbar');
-const helps = document.getElementById('menu-li');
-const item = [...document.querySelectorAll('.item')];
-const hamburger = document.querySelector('#menu-btn');
-const menu = document.querySelector('.menu');
-const logo = document.querySelector('.uniajc-logo');
-const email = document.querySelector('.email');
-const copyText = document.querySelector('#copy-text');
-const modal = document.querySelector('.modal-window');
-const reveals = document.querySelectorAll('.reveal');
+const navbar = document.querySelector('.navbar'),
+    helps = document.getElementById('menu-li'),
+    item = [...document.querySelectorAll('.item')],
+    hamburger = document.querySelector('#menu-btn'),
+    menu = document.querySelector('.menu'),
+    logo = document.querySelector('.uniajc-logo'),
+    email = document.querySelector('.email'),
+    copyText = document.querySelector('#copy-text'),
+    modal = document.querySelector('.modal-window'),
+    reveals = document.querySelectorAll('.reveal');
 
 let counter = 2;
 
@@ -37,7 +37,7 @@ toggleMenu = () => {
 }
 
 
-//  Sliders automatico 
+//  Desplazamiento de banners cada X:sg
 
 setInterval(() => {
     document.getElementById('radio' + counter).checked = true;
@@ -48,7 +48,7 @@ setInterval(() => {
 }, 8000);
 
 
-// Desplazamiento de la página
+// TODO: Desplazamiento de la página 
 
 for (let i = 0; i < item.length; i++) {
     item[i].addEventListener("click", () => {

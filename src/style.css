@@ -359,7 +359,7 @@ header {
 
 .illustration-figure {
     width: 100%;
-    background-image: url('assets/img/img-banner-1.webp');
+    background-image: url('assets/img/banner/img-banner-1.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -532,21 +532,20 @@ header {
     object-fit: cover;
 }
 
+/** --------------------------------
+ -- Imagenes de banner  --
+-------------------------------- */
+
 #slide-2 {
-    background-image: url('https://i.imgur.com/2KmZE13.jpg');
+    background-image: url('./assets/img/banner/banner-2.webp');
 }
 
 #slide-3 {
-    background-image: url('https://i.imgur.com/Vl3POmJ.jpg');
-}
-
-#slide-4 {
-    background-image: url('https://i.imgur.com/jX85RaA.gif');
+    background-image: url('./assets/img/banner/banner-3.webp');
 }
 
 #slide-5 {
-    background-image: url('https://i.imgur.com/UXlzfsW.jpg');
-    /* background-image: url('https://aulasvirtuales.uniajc.edu.co/pluginfile.php/1/theme_moove/sliderimage1/1655400705/Profe%20enchufado%20M-03%20%281%29.svg'); */
+    background-image: url('./assets/img/banner/banner-5.webp');
 }
 
 
@@ -658,24 +657,23 @@ header {
 }
 
 .card:nth-child(1):before {
-    background-image: url('https://i.imgur.com/ars9H61.png');
+    background-image: url('assets/img/card/ars9H61.webp');
     opacity: 0.8;
     background-size: auto;
 }
 
 .card:nth-child(2):before {
-    background-image: url('https://i.imgur.com/cW3FdPl.png');
+    background-image: url('assets/img/card/cW3FdPl.webp');
     opacity: 0.8;
 }
 
 .card:nth-child(3):before {
-    background-image: url('https://i.imgur.com/Frok5oU.png');
-    /* background-image: url('https://i.imgur.com/hPtH3dH.png'); */
+    background-image: url('assets/img/card/Frok5oU.webp');
     opacity: 0.8;
 }
 
 .card:nth-child(4):before {
-    background-image: url('https://i.imgur.com/nq4sz5R.png');
+    background-image: url('assets/img/card/nq4sz5R.webp');
     opacity: 0.8;
     background-size: auto;
 }
@@ -783,7 +781,7 @@ header {
 }
 
 .figure-right {
-    background-image: url('https://i.imgur.com/3V6RkOT.png');
+    background-image: url('assets/img/3V6RkOT.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -791,7 +789,7 @@ header {
 }
 
 .figure-left {
-    background-image: url('https://i.imgur.com/OqNSiZC.png');
+    background-image: url('assets/img/OqNSiZC.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -872,13 +870,13 @@ header {
 
 
 .soport .card:nth-child(1):before {
-    background-image: url('assets/img/soport-pro.webp');
+    background-image: url('assets/img/card/soport-pro.webp');
     background-size: contain;
     background-position: center;
 }
 
 .soport .card:nth-child(2):before {
-    background-image: url('assets/img/soport-est.webp');
+    background-image: url('assets/img/card/soport-est.webp');
     background-size: cover;
     background-position: left;
 }
@@ -923,18 +921,18 @@ header {
     text-transform: uppercase;
 }
 
-.number img {
+.number img, .number video {
     position: relative;
     left: -5%;
     width: 100px;
 }
 
-.users img {
+.users img, .users video {
     width: 80px;
 }
 
 .courses img {
-    width: 110px;
+    width: 100px;
 }
 
 /** --------------------------------
@@ -1358,22 +1356,6 @@ a:hover {
     margin-bottom: 15px;
 }
 
-/** --------------------------------
- -- Revelación de elementos  --
--------------------------------- */
-
-/* .reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-}
-
-.reveal.show-element{
-    transform: translateY(0px);
-    animation: MenuMobile_entry .5s ease;
-    opacity: 1;
-} */
-
 /* referencia de ilustraciones */
 
 .referencs {
@@ -1669,8 +1651,6 @@ a:hover {
     }
 
     .sections-info-banner {
-        /* ajustar el texto */
-        /* font-size: 0.8rem; */
         font-size: calc(12px - 10%);
     }
 
@@ -1746,18 +1726,16 @@ a:hover {
     .card {
         height: 300px;
         width: 100%;
-        /* display: none; */
     }
 
     .info-section .number img {
         width: 100px;
-        height: 100px;
+        height: 75px;
     }
 
     .info-section .number, .text {
         font-size: 0.9rem;
     }
-
 
     .plataforms-icon {
         height: 5rem;

@@ -21,6 +21,7 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('bg-transparent');
         itemsMenu.forEach(i => { i.classList.remove('cl-item') });
         logo.src = 'https://i.imgur.com/HoNwVDh.png';
+        menu.classList.remove('bg-menu');
     } else {
         navbar.classList.add('bg-transparent');
         itemsMenu.forEach(i => { i.classList.add('cl-item') });
@@ -35,8 +36,8 @@ window.addEventListener('scroll', () => {
 
 toggleMenu = () => {
     menu.classList.toggle('show-menu');
-    logo.src = 'https://i.imgur.com/LnGfALA.png';
-    navbar.classList.add('bg-transparent');
+    // logo.src = 'https://i.imgur.com/LnGfALA.png';
+    // navbar.classList.add('bg-transparent');
 }
 
 /** --------------------------------

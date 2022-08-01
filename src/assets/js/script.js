@@ -16,7 +16,7 @@ let counter = 2;
  -- Transparencia del navBar  --
 -------------------------------- */
 
-window.addEventListener('scroll', (event) => {
+window.addEventListener('scroll', () => {
     if (window.scrollY < 20) {
         navbar.classList.remove('bg-transparent');
         itemsMenu.forEach(i => { i.classList.add('cl-item') })

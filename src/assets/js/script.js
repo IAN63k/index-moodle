@@ -39,9 +39,8 @@ toggleMenu = () => {
     navbar.classList.add('bg-transparent');
 }
 
-
 /** --------------------------------
- -- Desplazamiento de banners cada X:sg  --
+ -- Desplazamiento de banners cada X sg  --
 -------------------------------- */
 
 setInterval(() => {
@@ -61,39 +60,18 @@ imgBanner[3].innerHTML = `
 
 
 /** --------------------------------
- -- TODO: Desplazamiento de la página   --
+ -- Desplazamiento de la página   --
 -------------------------------- */
 
-
-for (let i = 0; i < itemsMenu.length; i++) {
-    itemsMenu[i].addEventListener("click", () => {
-        let current = document.getElementsByClassName("active");
-        if (current.length > 0) {
-            current[0].className = current[0].className.replace(" active", "");
-        }
-        this.className += " active";
-        if (itemsMenu[i].innerHTML == 'Incio de sesión') {
-            // scroll the window to down
-            window.scrollTo(0, 500);
-        }
-        if (itemsMenu[i].innerHTML == 'Inicio') {
-            // scroll the window to up
-            window.scrollTo(0, 0);
-        }
-        if (itemsMenu[i].innerHTML == 'Ayudas') {
-            // scroll the window to down
-            window.scrollTo(0, 900);
-        }
-        if (itemsMenu[i].innerHTML == 'Contacto') {
-            // scroll the window to down
-            window.scrollTo(0, 2500);
-        }
+itemsMenu.forEach(item => {
+    item.addEventListener("click", () => {
+        document.querySelector(`#${item.textContent}`).scrollIntoView({ block: 'end', behavior: 'smooth' });
     });
-}
+});
 
 
 /** --------------------------------
- -- Copiar al portapapeles el correo --
+ -- Copiar correo al portapapeles --
 -------------------------------- */
 
 const copy = (text) => {

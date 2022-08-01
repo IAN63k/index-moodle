@@ -19,11 +19,11 @@ let counter = 2;
 window.addEventListener('scroll', () => {
     if (window.scrollY < 20) {
         navbar.classList.remove('bg-transparent');
-        itemsMenu.forEach(i => { i.classList.add('cl-item') })
+        itemsMenu.forEach(i => { i.classList.remove('cl-item') });
         logo.src = 'https://i.imgur.com/HoNwVDh.png';
     } else {
         navbar.classList.add('bg-transparent');
-        itemsMenu.forEach(i => { i.classList.remove('cl-item') });
+        itemsMenu.forEach(i => { i.classList.add('cl-item') });
         logo.src = 'https://i.imgur.com/LnGfALA.png';
         menu.classList.add('bg-menu');
     }
